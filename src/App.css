@@ -1,38 +1,137 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-image: linear-gradient(rgba(233, 200, 200, 0.3), rgba(0, 0, 0, 0.5));
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  background-image: url(https://img.setka.io/clients/xgWeg1kbAPuTM4NqlnIf0jRIjqw9Aus9/post_images/dvaaadomino-2022012110440842.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color:#ffa427;
+  
+}
+h1 {
+  font-family: 'Titan One', cursive;
+  font-size: 60px;
+ 
+}
+h2 {
+  font-family: 'Rubik', sans-serif;
+  text-shadow: 5px 5px 10px white;
+  font-size: 30px;
+ 
+}
+button {
+  font-family: 'Fredoka One', cursive;
+  padding: 20px;
+  margin: 10px;
+  font-size: 25px;
+  background-color: rgb(6, 205, 240);
+  box-shadow: 5px 5px 5px black;
+  border-radius: 50px;
+  text-shadow: 5px 5px 10px white;
+}
+.tip {
+  font-size: 50px;
+  font-family: 'Fredoka One', cursive;
+ margin-top: 100px;
+ 
+}
+ 
+
+.btn {
+  margin-top: 150px;
+  
+}
+.tip span {
+  background-color: rgb(240, 248, 255, .8);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50px;
+  box-shadow: 5px 5px 5px black;
+  line-height: 80px;
+ 
+}
+h1  span {
+  background-color: rgb(255, 251, 247, .8);
+  border-radius: 50px;
+  padding: 13px;
+
+}
+h2 span {
+  background-color: rgb(255, 251, 247, .8);
+  border-radius: 50px;
+  padding: 10px;
+  line-height: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@media all and (max-width: 912px) {
+  h1 {
+    margin-top: 200px;
   }
-  to {
-    transform: rotate(360deg);
+  h2 {
+    margin-top: 100px;
+  }
+}
+@media all and (max-width: 768px) {
+  h1 {
+    margin-top: 100px;
+  }
+  h2 {
+    margin-top: 50px;
+  }
+}
+@media all and (max-width: 540px)  {
+  h1 {
+    margin-top: 50px;
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .tip {
+    font-size: 30px;
+    margin-top: 50px;
+   
+  }
+  .tip span {
+    line-height: 55px;
+  }
+  .btn {
+    margin-top: 70px;
+    
+  }
+}
+@media all and (max-width: 375px) {
+  h1 {
+    margin-top: 30px;
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 17px;
+  }
+  .tip {
+    font-size: 25px;
+    margin-top: 30px;
+   
+  }
+  .btn {
+    margin-top: 30px;
+    
+  }
+}
+@media all and (max-width: 280px)  {
+  h1 {
+    margin-top: 30px;
+    font-size: 30px;
+  }
+  h2 span {
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 13px;
   }
 }

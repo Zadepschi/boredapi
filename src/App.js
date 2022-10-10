@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  return (
+
+  const [advice, setAdvice] = useState("");
+
+  const fetchAdvice = async () => {
+
+    const response = await fetch("http://www.boredapi.com/api/activity/");
+    const data = await response.json();
+    setAdvice(data);
+  };
+
+
+ useEffect(() => {
+  fetchAdvice();
+}, []);
+
+  return ( 
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <h1> <span> Bored?</span></h1>
+   <h2> <span>There is a lot of tips Inexpensive Hobbies here You Can Start Right now</span></h2>
+      <h2><span> For example {advice.type} </span></h2>
+   <h2 className='tip'><span> {advice.activity} </span></h2>
+
+   <div className='btn'>
+   <button onClick={fetchAdvice}>Get Advice</button>
+   </div>
     </div>
+    
   );
 }
 
